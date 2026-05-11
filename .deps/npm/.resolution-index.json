@@ -1,0 +1,15 @@
+{
+  "learning/StorageFactory.sol": {
+    "./SimpleStorage.sol": "learning/SimpleStorage.sol",
+    "__sources__": {
+      "learning/StorageFactory.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport {Simplestorage, Simplestorage2} from \"./SimpleStorage.sol\";\n\ncontract storagefactory{\n\n    Simplestorage public mysimplestorage;\n\n    function createsimplestorage() public{\n        mysimplestorage = new Simplestorage();\n    }\n}",
+        "file": "learning/StorageFactory.sol"
+      },
+      "learning/SimpleStorage.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0; //solidity version\n\ncontract Simplestorage{\n    uint256 myfavouritenumber = 0;\n\n    struct person {\n        string name;\n        uint256 favouritenumber;\n    }\n\n  person[] public listofperson;\n\n  mapping(string => uint256) public nameTomyfavouritenumber;\n\n    function store(uint256 _favouritenumber) public{\n        myfavouritenumber = _favouritenumber;}\n    \n    function adding(uint256 _inputyournumber) public {\n        myfavouritenumber = _inputyournumber + myfavouritenumber;\n    }\n\n    function retrieve() public view returns(uint256){\n        return myfavouritenumber;\n    }\n\n    function add_people(string memory _name, uint256 _favouritenumber) public {\n        listofperson.push( person(_name, _favouritenumber));\n\n        //function for mapping use\n        nameTomyfavouritenumber[_name] = _favouritenumber;\n    }\n\n }\n\n// example if the smart contract have many contract\ncontract Simplestorage2{}\ncontract Simplestorage3{}\ncontract Simplestorage4{}\n\n\n//  types of data in solidity that are often used:  \n// 1. string is like a character alphabet\n// 2. int(integer) its a number that can be plus or minus. example 1,-4,10,-29,etc.\n// 3. uint(unsigned integer) like a integer but it can't be minus and must be plus like 1,2,3,etc.\n// 4. boolean that type data only have a value true or false\n// 5. address is a type data have a form address from a public address,smart contract, token, etc.\n\n\n\n",
+        "file": "learning/SimpleStorage.sol"
+      }
+    }
+  }
+}

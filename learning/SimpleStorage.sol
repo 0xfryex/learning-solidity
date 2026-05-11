@@ -32,18 +32,11 @@ contract Simplestorage{
     }
 
  }
- 
 
-    contract storagefactory{
-
-    Simplestorage public mysimplestorage;
-
-    function createsimplestorage() public{
-        mysimplestorage = new Simplestorage();
-    }
-
-
-}
+// example if the smart contract have many contract
+contract Simplestorage2{}
+contract Simplestorage3{}
+contract Simplestorage4{}
 
 
 //  types of data in solidity that are often used:  
