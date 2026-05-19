@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0; //solidity version
 
-contract Simplestorage{
+contract SimpleStorage{
     uint256 myfavouritenumber = 0;
 
     struct person {
