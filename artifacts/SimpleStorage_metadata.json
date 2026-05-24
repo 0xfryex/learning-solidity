@@ -14,24 +14,11 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_favouritenumber",
+						"name": "_favoriteNumber",
 						"type": "uint256"
 					}
 				],
-				"name": "add_people",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_inputyournumber",
-						"type": "uint256"
-					}
-				],
-				"name": "adding",
+				"name": "addPerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -44,17 +31,17 @@
 						"type": "uint256"
 					}
 				],
-				"name": "listofperson",
+				"name": "listOfPeople",
 				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
 					{
 						"internalType": "string",
 						"name": "name",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "favouritenumber",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -68,7 +55,7 @@
 						"type": "string"
 					}
 				],
-				"name": "nameTomyfavouritenumber",
+				"name": "nameToFavoriteNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -96,7 +83,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_favouritenumber",
+						"name": "_favoriteNumber",
 						"type": "uint256"
 					}
 				],
@@ -119,7 +106,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/SimpleStorage.sol": "SimpleStorage"
+			"learning/test.sol": "SimpleStorage"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -133,12 +120,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/SimpleStorage.sol": {
-			"keccak256": "0xee52b71903d6c7c82b96f4a97cfa8b360ed27ad58f571fe9104aedfee017e4c6",
+		"learning/test.sol": {
+			"keccak256": "0x58595325fb6ac46153e5f2cf403e7531b1580698caab08fc1f0a5fdfe96ba238",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c5a09c8fda45cd924bceb8c7935fdbd9d690c2935850816ea1fbc7c66b403400",
-				"dweb:/ipfs/QmaCpnEHxLEysCKaX2HMr5jiR4WTLdbu8p4FBm8hWh6w5D"
+				"bzz-raw://1d4ed724b2bf902bf7a896cb43412a3f68e0f31eed255f8b86b234b465fb69d3",
+				"dweb:/ipfs/QmYxR7sUzSvmQtdu8w2S4N5tjvDYmJ3h6Dpkhzg8zdFyye"
 			]
 		}
 	},
