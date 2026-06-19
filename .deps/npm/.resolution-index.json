@@ -19,5 +19,45 @@
         "file": "learning/test.sol"
       }
     }
+  },
+  "learning/PriceConverter.sol": {
+    "__sources__": {
+      "learning/PriceConverter.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n// solhint-disable-next-line interface-starts-with-i\r\ninterface AggregatorV3Interface {\r\n  function decimals() external view returns (uint8);\r\n\r\n  function description() external view returns (string memory);\r\n\r\n  function version() external view returns (uint256);\r\n\r\n  function getRoundData(\r\n    uint80 _roundId\r\n  ) external view returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\r\n\r\n  function latestRoundData()\r\n    external\r\n    view\r\n    returns (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound);\r\n}",
+        "file": "learning/PriceConverter.sol"
+      }
+    }
+  },
+  "learning/Fund.sol": {
+    "__sources__": {
+      "learning/Fund.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\nimport\r\n\r\ncontract fund{\r\n    uint256 public minimumusd;\r\n\r\n    address[] public        \r\n}",
+        "file": "learning/Fund.sol"
+      }
+    }
+  },
+  "learning/fundme(lite).sol": {
+    "__sources__": {
+      "learning/fundme(lite).sol": {
+        "content": " // SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract crowdfunding{\r\n\r\n    address public immutable owner;\r\n\r\n    address[] public funder;\r\n    address[] public withdrawer;\r\n\r\n    uint256 public minimumeth = 1e18;\r\n\r\n    mapping (address funder => uint256 amountfunded) public AddressToAmountFunded;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function fund() public payable {\r\n     if (AddressToAmountFunded[msg.sender] == 0){\r\n        funder.push(msg.sender);\r\n     }\r\n        AddressToAmountFunded[msg.sender] += msg.value;\r\n        }\r\n\r\n    function withdraw(uint256 _amount) public {\r\n        //convert from wei to ether\r\n        uint256 AmountInWei = _amount * 1e18;\r\n        //i will apply use cei (checks, effects, interact) security\r\n        //checks\r\n        //validation the owner\r\n        require(msg.sender == owner, \"you are not owner\");\r\n        //validation the balance\r\n        require(address(this).balance >= AmountInWei, \"your balance is not enough!!!\");\r\n\r\n        //effect\r\n        //not required\r\n\r\n        //interact\r\n        //send the eth\r\n        (bool callsuccess, ) = payable(msg.sender).call{value: AmountInWei}(\"\");\r\n        //to ensure the transaction is success\r\n        require(callsuccess, \"transaction is failed\");\r\n        }\r\n    }",
+        "file": "learning/fundme(lite).sol"
+      }
+    }
+  },
+  "learning/donation.sol": {
+    "__sources__": {
+      "learning/donation.sol": {
+        "content": " // SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract donation{\r\n\r\n    address public immutable owner;\r\n\r\n    address[] public funder;\r\n    address[] public withdrawer;\r\n\r\n    uint256 public minimumeth = 1e18;\r\n\r\n    mapping (address funder => uint256 amountfunded) public AddressToAmountFunded;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function fund() public payable {\r\n     if (AddressToAmountFunded[msg.sender] == 0){\r\n        funder.push(msg.sender);\r\n     }\r\n        AddressToAmountFunded[msg.sender] += msg.value;\r\n        }\r\n\r\n    function withdraw(uint256 _amount) public {\r\n        //convert from wei to ether\r\n        uint256 AmountInWei = _amount * 1e18;\r\n        //i will apply use cei (checks, effects, interact) security\r\n        //checks\r\n        //validation the owner\r\n        require(msg.sender == owner, \"you are not owner\");\r\n        //validation the balance\r\n        require(address(this).balance >= AmountInWei, \"your balance is not enough!!!\");\r\n\r\n        //effect\r\n        //not required\r\n\r\n        //interact\r\n        //send the eth\r\n        (bool callsuccess, ) = payable(msg.sender).call{value: AmountInWei}(\"\");\r\n        //to ensure the transaction is success\r\n        require(callsuccess, \"transaction is failed\");\r\n        }\r\n    }",
+        "file": "learning/donation.sol"
+      }
+    }
+  },
+  "learning/Donation.sol": {
+    "__sources__": {
+      "learning/Donation.sol": {
+        "content": " // SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract donation{\r\n\r\n    address public immutable owner;\r\n\r\n    address[] public funder;\r\n\r\n    mapping (address funder => uint256 amountfunded) public AddressToAmountFunded;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function fund() public payable {\r\n     if (AddressToAmountFunded[msg.sender] == 0){\r\n        funder.push(msg.sender);\r\n     }\r\n        AddressToAmountFunded[msg.sender] += msg.value;\r\n        }\r\n\r\n    function withdraw(uint256 _amount) public {\r\n        //convert from wei to ether\r\n        uint256 AmountInWei = _amount * 1e18;\r\n\r\n        //i will apply use CEI (Check, Effect, Interact) security technuiqe\r\n        //checks\r\n        //validation the owner\r\n        require(msg.sender == owner, \"you are not owner\");\r\n        //validation the balance\r\n        require(address(this).balance >= AmountInWei, \"your balance is not enough!!!\");\r\n\r\n        //effect\r\n\r\n        //interact\r\n        //send the eth\r\n        (bool callsuccess, ) = payable(msg.sender).call{value: AmountInWei}(\"\");\r\n        //to ensure the transaction is success\r\n        require(callsuccess, \"transaction is failed\");\r\n        }\r\n    }",
+        "file": "learning/Donation.sol"
+      }
+    }
   }
 }
