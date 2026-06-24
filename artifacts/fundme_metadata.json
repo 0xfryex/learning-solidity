@@ -7,107 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "funder",
-						"type": "address"
-					}
-				],
-				"name": "AddressToAmountFunded",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "amountfunded",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "funder",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "minimumeth",
+				"name": "minimumusd",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "withdrawer",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -127,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/fundme(lite).sol": "fundme"
+			"learning/Fundme/fundme.sol": "fundme"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -141,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/fundme(lite).sol": {
-			"keccak256": "0xac316be87f4b0bdab34ba772322fbcde96b77ed3dadd57e109066056ef2bacb4",
+		"learning/Fundme/fundme.sol": {
+			"keccak256": "0x153e4fc600731073c1ad20ef5aae9007e676f15d993dbcc61ec5c5571cd1338d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://535c4980226effe15e0ff92015a8d7c6fe7ae3b398eba5b993e2a218bace2117",
-				"dweb:/ipfs/QmXyg4DrKjpY3ZvjDpGhCqM5h6Y5aaRphBMShu7tvd9MST"
+				"bzz-raw://38dadea579df8ed49a598afce572af989170260396d19a044b571d42518ae920",
+				"dweb:/ipfs/QmNv44twnhtVdgxvb1Qg3mDKr2i9fXZNKrAukYfzkPznm2"
 			]
 		}
 	},
