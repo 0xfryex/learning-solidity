@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0; //solidity version
+pragma solidity >=0.8.0 <0.9.0;
 
 contract SimpleStorage{
     uint256 myfavouritenumber = 0;
@@ -32,19 +32,3 @@ contract SimpleStorage{
     }
 
  }
-
-// example if the smart contract have many contract
-contract Simplestorage2{}
-contract Simplestorage3{}
-contract Simplestorage4{}
-
-
-//  types of data in solidity that are often used:  
-// 1. string is like a character alphabet
-// 2. int(integer) its a number that can be plus or minus. example 1,-4,10,-29,etc.
-// 3. uint(unsigned integer) like a integer but it can't be minus and must be plus like 1,2,3,etc.
-// 4. boolean that type data only have a value true or false
-// 5. address is a type data have a form address from a public address,smart contract, token, etc.
-
-
-
